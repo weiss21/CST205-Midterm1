@@ -36,7 +36,7 @@ def blueThird(pic):
       setBlue(p, b*3)
   return pic
 
-
+# This function turns an image red white and blue
 def redWhiteBlue(pic):
   
   #Resize Function needed here
