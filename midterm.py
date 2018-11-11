@@ -36,6 +36,35 @@ def blueThird(pic):
       setBlue(p, b*3)
   return pic
 
+#BlackandWhite
+def betterBnW(pic):
+  pixels = getPixels(pic)
+  
+  for p in pixels:
+    b = getBlue(p)
+    g = getGreen(p)
+    r = getRed(p)
+    avg = ((b*0.114) + (g*0.587) + (r*0.299))  
+    setRed(p, avg)
+    setGreen(p, avg)
+    setBlue(p, avg)
+  return pic
+
+# This function turns an image red white and blue
+def redWhiteBlue(pic):
+  
+  #Resize Function needed here
+  
+   betterBnW(pic)
+  #Red filter, First Third
+  redThird(pic)
+  #White filter, Second Third
+  whiteThird(pic)
+  #Blue filter, Last Third
+  blueThird(pic)
+  repaint(pic)
+  return pic
+
 # This function determines whether the image is big enough for the filter.
 def testPicSize(pic):
   minimum_size = 500
@@ -45,19 +74,3 @@ def testPicSize(pic):
     return None
   elif height < minimum_size:
     return None
-  return pic
-
-# This function turns an image red white and blue
-def redWhiteBlue(pic):
-  
-  #Resize Function needed here
-  
-  
-  #Red filter, First Third
-  redThird(pic)
-  #White filter, Second Third
-  whiteThird(pic)
-  #Blue filter, Last Third
-  blueThird(pic)
-  repaint(pic)
-  return pic
