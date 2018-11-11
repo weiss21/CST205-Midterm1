@@ -36,6 +36,17 @@ def blueThird(pic):
       setBlue(p, b*3)
   return pic
 
+# This function determines whether the image is big enough for the filter.
+def testPicSize(pic):
+  minimum_size = 500
+  height = getHeight(pic)
+  width = getWidth(pic)
+  if width <= minimum_size:
+    return None
+  elif height < minimum_size:
+    return None
+  return pic
+
 # This function turns an image red white and blue
 def redWhiteBlue(pic):
   
