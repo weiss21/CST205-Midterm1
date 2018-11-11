@@ -50,6 +50,7 @@ def betterBnW(pic):
     setBlue(p, avg)
   return pic
 
+# This function turns an image red white and blue
 def redWhiteBlue(pic):
   
   #Resize Function needed here
@@ -63,3 +64,13 @@ def redWhiteBlue(pic):
   blueThird(pic)
   repaint(pic)
   return pic
+
+# This function determines whether the image is big enough for the filter.
+def testPicSize(pic):
+  minimum_size = 500
+  height = getHeight(pic)
+  width = getWidth(pic)
+  if width <= minimum_size:
+    return None
+  elif height < minimum_size:
+    return None
