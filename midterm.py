@@ -36,6 +36,19 @@ def blueThird(pic):
       setBlue(p, b*3)
   return pic
 
+#BlackandWhite
+def betterBnW(pic):
+  pixels = getPixels(pic)
+  
+  for p in pixels:
+    b = getBlue(p)
+    g = getGreen(p)
+    r = getRed(p)
+    avg = ((b*0.114) + (g*0.587) + (r*0.299))  
+    setRed(p, avg)
+    setGreen(p, avg)
+    setBlue(p, avg)
+  return pic
 
 def redWhiteBlue(pic):
   
