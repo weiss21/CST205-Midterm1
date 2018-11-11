@@ -54,7 +54,7 @@ def redWhiteBlue(pic):
   
   #Resize Function needed here
   
-  
+   betterBnW(pic)
   #Red filter, First Third
   redThird(pic)
   #White filter, Second Third
