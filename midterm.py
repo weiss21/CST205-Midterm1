@@ -53,9 +53,7 @@ def betterBnW(pic):
 # This function turns an image red white and blue
 def redWhiteBlue(pic):
   
-  #Resize Function needed here
-  
-   betterBnW(pic)
+  betterBnW(pic)
   #Red filter, First Third
   redThird(pic)
   #White filter, Second Third
@@ -71,6 +69,43 @@ def testPicSize(pic):
   height = getHeight(pic)
   width = getWidth(pic)
   if width <= minimum_size:
-    return None
+    return False
   elif height < minimum_size:
+    return False
+  return True
+
+# This function resizes the picture
+def resizePic(pic):
+  return pic
+
+def drawBeach(pic):
+  pic = addSun(pic, 500, 500)
+  return pic
+
+# This function adds the sun to the specified location
+def addSun(pic, x, y):
+  return pic
+
+# This function draws sand on the bottom of the image
+def drawSand(pic, height, width):
+  return pic
+
+def drawSign(pic, x, y):
+  return pic
+
+# This is the main function for the midterm project
+def main():
+  pic = getPic()
+  picSize = testPicSize(pic)
+
+  # Tests the image to see if it is big enough
+  if not picSize:
     return None
+
+  # Resize the image
+  pic = resizePic(pic)
+
+  # Apply first filter - make image red, white and blue
+  pic = redWhiteBlue(pic)
+
+  return pic
