@@ -78,6 +78,21 @@ def testPicSize(pic):
 def resizePic(pic):
   return pic
 
+def drawBeach(pic):
+  pic = addSun(pic, 500, 500)
+  return pic
+
+# This function adds the sun to the specified location
+def addSun(pic, x, y):
+  return pic
+
+# This function draws sand on the bottom of the image
+def drawSand(pic, height, width):
+  return pic
+
+def drawSign(pic, x, y):
+  return pic
+
 # This is the main function for the midterm project
 def main():
   pic = getPic()
