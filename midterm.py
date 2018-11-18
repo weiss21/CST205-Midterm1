@@ -202,6 +202,5 @@ def main():
 
   # Apply second filter - add beach scene
   pic = drawBeach(pic, width, height)
-  explore(pic)
 
   return pic
